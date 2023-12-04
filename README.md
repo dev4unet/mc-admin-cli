@@ -18,6 +18,12 @@ If you have any difficulties in using mcc, please let us know.
 - 현재는 Docker Compose 모드 방식만 제공합니다.
   - [Docker Compose 모드](docs/mcc-docker-compose-mode.md)
 
+## Namming Rule
+- 파일명은 카멜 타입을 사용하며 usage message는 하이픈을 그대로 사용 함.   
+  (예) cbSpider.go / Use: "cb-spider"
+- 하위 커맨드(예:vpc.go)는 상위 커맨드(예:Spider.go)의 파일 명을 Prefix로 사용함.   
+  (예) Spider의 VPC 기능을 담당하는 파일의 경우 SpiderVpc.go
+
 ## Install Docker & Docker Compose V2
 - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 - Tested version: Docker version 24.0.7, build afdd53b
@@ -101,7 +107,7 @@ Flags:
   -h, --help          help for stop
 
 Global Flags:
-      --config string   config file (default is $HOME/.mccvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv.yaml)
+      --config string   config file (default is $HOME/.mcc.yaml)
 ```
 
 
